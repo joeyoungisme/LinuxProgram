@@ -6,7 +6,7 @@
 void *my_thread(void *arg)
 {
     int res = pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
-    
+
     res = pthread_setcanceltype(PTHREAD_CANCEL_DEFERRED, NULL);
 
     int index = 0;
@@ -19,7 +19,7 @@ void *my_thread(void *arg)
 
     pthread_exit(NULL);
 }
-        
+
 
 int main(int argc, char *argv[])
 {

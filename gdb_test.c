@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     int a, b, c;
     char message[] = "hello world";
-    
+
     a = 10;
     b = 20;
     c = 30;

@@ -9,12 +9,12 @@
 pthread_mutex_t mutex;
 
 
-char main_thread_text[] = 
+char main_thread_text[] =
     "Hello World i am Joeyoung Chen"
     "leven in taichung "
     "i am a boy ....";
 
-char child_thread_text[] = 
+char child_thread_text[] =
     "abcd efg hijk lmn opqr"
     "stuv wxyz 111 222 333"
     "1234 1234 5678";
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         printf("Pthread Create Failed !!\n");
         exit(EXIT_FAILURE);
     }
-    
+
     while(message)
     {
         printf("------ Main Ready ------\n");
@@ -66,9 +66,9 @@ int main(int argc, char *argv[])
 
     printf("Child Joined !! Release Anything...\n");
     pthread_mutex_destroy(&mutex);
-    
 
-}    
+
+}
 
 void *first_thread(void *arg)
 {

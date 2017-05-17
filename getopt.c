@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 
-char usage[] = 
+char usage[] =
     "Usage : ./getopt [option]\n"
     " -a : Please Key Something ... \n"
     " -b : Please Key Something ... \n"

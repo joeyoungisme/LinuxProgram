@@ -4,7 +4,7 @@
 #include<string.h>
 #include<dirent.h>
 
-char help_message[] = 
+char help_message[] =
     "Usage : %s <path>\n";
 
 void call_help(char *name)
@@ -64,19 +64,19 @@ int main(int argc, char *argv[])
             unsigned char edited = 0;
             while(NULL != fgets(buffer, 1024, fd)) {
                 line_count++;
- 
+
                 char *tail = strchr(buffer, '\0') - 1;
- 
+
                 if(((*tail == '\n') && (*(tail - 1) == ' ')) || (*tail == ' ')) {
                     printf("[%d] : %s", line_count, buffer);
                     tail = find_string_tail(buffer);
                     snprintf(tail + 1, 2, "\n");
                     edited = 1;
                 }
- 
+
                 fputs(buffer, wfd);
             }
- 
+
             fclose(fd);
             fclose(wfd);
 
@@ -91,4 +91,4 @@ int main(int argc, char *argv[])
 
     printf("Total Edited File : %d\n", erase_file_count);
 }
-    
+

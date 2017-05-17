@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     free(cpy_str);
 
     char my_str[256];
-    
+
     int res = snprintf(my_str, 256, "%s _ %s _ %s", "Hello", "world", "joeyoung");
     printf("snprintf res = %d\n", res);
     printf("my_str : %s\n", my_str);

@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     pthread_attr_t thread_attr;
     pthread_attr_init(&thread_attr);
-    
+
     int priority_min = 0, priority_max = 0;
     struct sched_param sched_value;
 

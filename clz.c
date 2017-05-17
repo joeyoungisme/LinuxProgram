@@ -10,7 +10,7 @@ int my_clz(unsigned int x) {
     return count;
 }
 
-int my_clz2(unsigned int x) 
+int my_clz2(unsigned int x)
 {
     if(x) return my_clz2(x >> 1)+1;
     else return 1;
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
     clock_t clz_end = clock();
     double time_spent = (double) (clz_end - clz_start) / CLOCKS_PER_SEC;
     printf("clz run time : %f\n", time_spent);
-    
+
     clz_start = clock();
     printf("%d = %d\n", x, my_clz(x));
     clz_end = clock();

@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
         while(1) {
             printf("Parent : Wait Child dead ....\n");
-            
+
             sleep(2);
         }
     }

@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         printf("Pthread Attr Destroy Failed !\n");
         exit(EXIT_FAILURE);
     }
-    
+
     while(1) {
         if(Child_Kill)
             printf("Ha Ha Child Killed!!\n");
@@ -68,7 +68,7 @@ void *detach_thread(void *arg)
         if(Child_Kill) {
             pthread_exit(NULL);
         }
-        
+
         sleep(1);
     }
 }

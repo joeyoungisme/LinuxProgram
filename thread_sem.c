@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 
     //set run_thread to 0
     run_thread = 0;
-    // Because Thread still wait sem_t +1 .... 
+    // Because Thread still wait sem_t +1 ....
     sem_post(&my_sem);
 
     printf("Waiting Thread Close ...\n");
@@ -68,4 +68,4 @@ void *first_thread(void *arg)
 
 
 
-    
+

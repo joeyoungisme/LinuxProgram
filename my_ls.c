@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-    
+
     char path[256];
 
     if(argc == 1)
@@ -45,4 +45,4 @@ int main(int argc, char *argv[])
 
     exit(EXIT_SUCCESS);
 }
-    
+

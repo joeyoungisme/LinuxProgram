@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     for(int index = 0; index < 10; ++index, pindex = pindex->next) {
         pindex->next = (struct joe_struct *)malloc(sizeof(struct joe_struct));
         head.prev = pindex->next;
-        
+
         pindex->next->next = &head;
         pindex->next->prev = pindex;
         pindex->next->data = pindex->data - 1;
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
         printf("pos = %X\n", pos);
         printf("pos data = %d\n", pos->data);
     }
-        
+
 /*
     printf("test(char + unsigned long) address = %X\n", (char *)&test+(unsigned long)16);
     printf("test(char + unsigned int) address = %X\n", (char *)&test+(unsigned int)16);

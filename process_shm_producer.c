@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     my_struct = (MY_STRUCT *)share_point;
     my_struct.lock = 0;
     memset(my_struct.buffer, 0, MEM_SIZE);
-    
+
     printf("I am Producer , Try to Read Message Every 1 second Start..\n");
 
     while(1) {

@@ -10,7 +10,7 @@
 static int sem_id;
 
 
-static int set_semvalue(void) 
+static int set_semvalue(void)
 {
     union sem_init new_sem;
 
@@ -43,7 +43,7 @@ static int semaphore_p(void)
         fprintf(stderr, "semaphore_v failed \n");
         return 1;
     }
-    
+
     return 0;
 }
 
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 {
 
     sem_id = semget(JOE_SEM_KEY, 1, 0777 | IPC_CREAT);
-    
+
     if(argc == 2) {
         if(set_semvalue()) {
             fprintf(stderr, "Failed to initialize semaphore\n");

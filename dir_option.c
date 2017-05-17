@@ -49,7 +49,7 @@ int main(int argc ,char *argv[])
     sleep(3);
     system("clear");
     printf("ls implemented myself, used scandir .... \n");
-            
+
 
     struct dirent **dir_list;
 
@@ -69,7 +69,7 @@ int main(int argc ,char *argv[])
         case DT_DIR :
             printf("Dir  -- ");
             break;
-        default : 
+        default :
             printf("Oth  -- ");
         }
 
