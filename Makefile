@@ -1,6 +1,6 @@
 CC=gcc
 #INCLUDE_PATH=/usr/lib/modules/4.9.11-1-ARCH/build/arch/x86/include/asm/
-CFLAGS=-g -Wall -O3 
+CFLAGS=-g -Wall -O3
 LDLIBS=
 OBJECT=
 FILE=

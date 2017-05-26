@@ -20,6 +20,25 @@ void *my_thread(void *arg)
     pthread_exit(NULL);
 }
 
+int thread_call_function(void)
+{
+    sleep(1);
+
+    pthread_exit(NULL);
+}
+
+void *scend_thread(void *arg)
+{
+    printf("In Second Thread!!\n");
+
+    thread_call_function();
+
+    printf("second thread printf Before Exit!!\n");
+
+    return NULL;
+}
+
+
 
 int main(int argc, char *argv[])
 {
@@ -34,6 +53,14 @@ int main(int argc, char *argv[])
     sleep(3);
 
     pthread_join(mythread, NULL);
+
+    pthread_t second_thread;
+
+    res = pthread_create(&second_thread, NULL, scend_thread, NULL);
+
+    pthread_join(second_thread, NULL);
+
+    printf("Main Function Printf!\n");
 
     exit(EXIT_SUCCESS);
 }
