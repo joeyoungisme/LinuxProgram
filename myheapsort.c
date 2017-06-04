@@ -18,8 +18,8 @@ typedef enum {
     UNKNOWN_CHILD
 }BIG_CHILD;
 
-int data_arr[] = {45,20,33,17,6,99,128,43,66,72,84,13,69,75,36};
-//int data_arr[] = {1,2,3,4,5,6,7};
+//int data_arr[] = {45,20,33,17,6,99,128,43,66,72,84,13,69,75,36};
+int data_arr[] = {1,2,3,4,5,6,7};
 #define STR_LEN                             256
 char str_arr[][STR_LEN] = {
     "abdcslfjg",

@@ -1,17 +1,17 @@
 CC=gcc
 #INCLUDE_PATH=/usr/lib/modules/4.9.11-1-ARCH/build/arch/x86/include/asm/
-CFLAGS=-g -Wall -O3
+CFLAGS=-g -Wall -O3 -I ./libjoe
 LDLIBS=
-OBJECT=
+OBJECT=./libjoe/*.o
 FILE=
 THREAD=
 
 
 $(FILE): $(FILE).o $(OBJECT)
 ifeq ($(THREAD), true)
-	$(CC) $(LDLIBS) -lpthread -o $(FILE) $(FILE).o
+	$(CC) $(LDLIBS) -lpthread -o $(FILE) $(FILE).o $(OBJECT)
 else
-	$(CC) $(LDLIBS) -o $(FILE) $(FILE).o
+	$(CC) $(LDLIBS) -o $(FILE) $(FILE).o $(OBJECT)
 endif
 
 $(FILE).o: $(FILE).c
