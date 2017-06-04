@@ -12,7 +12,7 @@ union sem_init {
     struct semid_ds *buf;
     unsigned short *array;
 };
-    
+
 
 
 
