@@ -6,17 +6,16 @@
 
 int main(int argc, char *argv[])
 {
-    char gloden_str[] = "Hello world, i am joeyoung";
+    char test99[] = "hello world";
+    char test999[] = "joeyoung";
+    char longmessage[] = "abcdefghijklmnopqrstuvwxyzasdflkasdf";
 
-    char *cpy_str = strndup(gloden_str, strlen(gloden_str));
+    
+    strncpy(test99, longmessage, strlen(longmessage));
+    strncpy(test999, longmessage, strlen(longmessage));
 
-    printf("Gloden String = %s\n", gloden_str);
 
-    printf("Copy String = %s\n", cpy_str);
-
-    printf("Copy String length = %d\n", strlen(cpy_str));
-
-    free(cpy_str);
+    printf("99 : %s, 999 : %s\n", test99, test999);
 
     char my_str[256];
 

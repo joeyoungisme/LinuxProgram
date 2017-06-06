@@ -4,6 +4,8 @@
 #include<string.h>
 #include<dirent.h>
 
+#include "heapsort.h"
+
 
 int main(int argc, char *argv[])
 {
