@@ -31,5 +31,7 @@ int main()
     printf("sizeof int point = %d\n", sizeof(a));
     printf("sizeof *int = %d\n", sizeof(*a));
 
+    printf("Sizeof (char *) = %d\n", sizeof(char *));
+
     return 0;
 }
